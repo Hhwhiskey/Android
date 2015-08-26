@@ -1,18 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dl_blocly_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_dark"
+    android:weightSum="1">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="1"
-        android:background="@color/primary_dark">
+        android:background="@android:color/background_light"
+        android:orientation="vertical">
 
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb_blocly_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize" />
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv_activity_blocly"
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/srl_activity_blocly"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/background_light" />
+            android:orientation="vertical">
 
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_blocly_activity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
 
     </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_nav_activity_blocly"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="?android:windowBackground" />
+
+</android.support.v4.widget.DrawerLayout>

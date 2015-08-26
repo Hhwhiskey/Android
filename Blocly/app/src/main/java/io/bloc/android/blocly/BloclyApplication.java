@@ -20,7 +20,6 @@ public class BloclyApplication extends Application {
         return sharedInstance;
     }
 
-    // #2
     public static DataSource getSharedDataSource() {
         return BloclyApplication.getSharedInstance().getDataSource();
     }
@@ -28,7 +27,6 @@ public class BloclyApplication extends Application {
     private static BloclyApplication sharedInstance;
     private DataSource dataSource;
 
-    // #3
     @Override
     public void onCreate() {
         super.onCreate();
